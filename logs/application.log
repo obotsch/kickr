@@ -1,0 +1,298 @@
+2015-08-26 20:56:44,224 - [INFO] - from play in pool-4-thread-1 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-08-26 20:56:53,151 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2015-08-26 20:56:53,160 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'kickr'! Servers:
+		[localhost:27017]
+
+2015-08-26 20:56:53,163 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-08-26 20:57:56,874 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin stops, closing connections...
+
+2015-08-26 20:57:56,881 - [WARN] - from play in play-internal-execution-context-1 
+Error stopping plugin
+java.lang.IllegalStateException: Can't get ClosableLazy value after it has been closed
+	at play.core.ClosableLazy.get(ClosableLazy.scala:49) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.AkkaPlugin.applicationSystem(Akka.scala:71) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.libs.concurrent.Akka$.system(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver$lzycompute(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection$lzycompute(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:51) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.modules.reactivemongo.ReactiveMongoPlugin.onStop(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+
+2015-08-26 20:57:56,905 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2015-08-26 20:57:56,905 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'kickr'! Servers:
+		[localhost:27017]
+
+2015-08-26 20:57:56,906 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-08-26 21:19:09,060 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin stops, closing connections...
+
+2015-08-26 21:19:09,061 - [WARN] - from play in play-internal-execution-context-1 
+Error stopping plugin
+java.lang.IllegalStateException: Can't get ClosableLazy value after it has been closed
+	at play.core.ClosableLazy.get(ClosableLazy.scala:49) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.AkkaPlugin.applicationSystem(Akka.scala:71) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.libs.concurrent.Akka$.system(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver$lzycompute(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection$lzycompute(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:51) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.modules.reactivemongo.ReactiveMongoPlugin.onStop(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+
+2015-08-26 21:19:09,086 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2015-08-26 21:19:09,087 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'kickr'! Servers:
+		[localhost:27017]
+
+2015-08-26 21:19:09,087 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-08-26 21:31:47,458 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin stops, closing connections...
+
+2015-08-26 21:31:47,458 - [WARN] - from play in play-internal-execution-context-1 
+Error stopping plugin
+java.lang.IllegalStateException: Can't get ClosableLazy value after it has been closed
+	at play.core.ClosableLazy.get(ClosableLazy.scala:49) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.AkkaPlugin.applicationSystem(Akka.scala:71) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.libs.concurrent.Akka$.system(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver$lzycompute(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection$lzycompute(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:51) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.modules.reactivemongo.ReactiveMongoPlugin.onStop(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+
+2015-08-26 21:31:47,487 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2015-08-26 21:31:47,487 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'kickr'! Servers:
+		[localhost:27017]
+
+2015-08-26 21:31:47,487 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-08-26 21:34:43,926 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin stops, closing connections...
+
+2015-08-26 21:34:43,926 - [WARN] - from play in play-internal-execution-context-1 
+Error stopping plugin
+java.lang.IllegalStateException: Can't get ClosableLazy value after it has been closed
+	at play.core.ClosableLazy.get(ClosableLazy.scala:49) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.AkkaPlugin.applicationSystem(Akka.scala:71) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.libs.concurrent.Akka$.system(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver$lzycompute(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection$lzycompute(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:51) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.modules.reactivemongo.ReactiveMongoPlugin.onStop(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+
+2015-08-26 21:34:43,948 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2015-08-26 21:34:43,949 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'kickr'! Servers:
+		[localhost:27017]
+
+2015-08-26 21:34:43,949 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-08-26 21:37:56,427 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin stops, closing connections...
+
+2015-08-26 21:37:56,428 - [WARN] - from play in play-internal-execution-context-1 
+Error stopping plugin
+java.lang.IllegalStateException: Can't get ClosableLazy value after it has been closed
+	at play.core.ClosableLazy.get(ClosableLazy.scala:49) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.AkkaPlugin.applicationSystem(Akka.scala:71) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.api.libs.concurrent.Akka$$anonfun$system$1.apply(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.libs.concurrent.Akka$.system(Akka.scala:29) ~[play_2.11-2.3.9.jar:2.3.9]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver$lzycompute(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.driver(ReactiveMongoPlugin.scala:164) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection$lzycompute(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoHelper.connection(ReactiveMongoPlugin.scala:165) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:51) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.modules.reactivemongo.ReactiveMongoPlugin$$anonfun$onStop$2.apply(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.modules.reactivemongo.ReactiveMongoPlugin.onStop(ReactiveMongoPlugin.scala:50) ~[play2-reactivemongo_2.11-0.10.5.0.akka23.jar:0.10.5.0.akka23]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.6.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.9.jar:2.3.9]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.9.jar:2.3.9]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.6.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.9.jar:2.3.9]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.9.jar:2.3.9]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.6.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.6.jar:na]
+
+2015-08-26 21:37:56,449 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin starting...
+
+2015-08-26 21:37:56,450 - [INFO] - from application in play-internal-execution-context-1 
+ReactiveMongoPlugin successfully started with db 'kickr'! Servers:
+		[localhost:27017]
+
+2015-08-26 21:37:56,450 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+

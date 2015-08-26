@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: org.webjars:uglifyjs:2.4.13:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.webjars/uglifyjs/jars/uglifyjs-2.4.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
